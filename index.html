@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript Project</title>
+    <title>JavaScript Project with Vue</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Vue.js via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-<h1>Welcome to My JavaScript Project</h1>
-<button onclick="showMessage()">Click Me!</button>
+<h1>Welcome to My JavaScript Project with Vue</h1>
+
+<!-- Vue App -->
+<div id="app">
+    <h2>{{ message }}</h2>
+    <button @click="showMessage">Click Me!</button>
+    <p v-if="clicked">{{ clickedMessage }}</p>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
